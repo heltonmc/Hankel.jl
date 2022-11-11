@@ -71,14 +71,14 @@ end
         @test Hankel.sphbesselj(2, 1, 0) ≈ 0
         @test Hankel.sphbesselj(2, 2, 0) ≈ 0
         @test Hankel.sphbesselj(0, 1, 0.2) == besselj(0, 0.2)
-        @test Hankel.sphbesselj(1, 1, 0.2) == besselj(1, 0.2)
+        @test Hankel.sphbesselj(1, 1, 0.2) ≈ besselj(1, 0.2)
         @test Hankel.sphbesselj(2, 1, 0.2) == besselj(2, 0.2)
         @test Hankel.sphbesselj(0, 2, 0.2) ≈ besselj(0.5, 0.2) * √(π / 2 / 0.2)
         @test Hankel.sphbesselj(1, 2, 0.2) ≈ besselj(1.5, 0.2) * √(π / 2 / 0.2)
         @test Hankel.sphbesselj(2, 2, 0.2) ≈ besselj(2.5, 0.2) * √(π / 2 / 0.2)
-        @test Hankel.sphbesselj(0, 3, 0.2) == besselj(1, 0.2) / 0.2
+        @test Hankel.sphbesselj(0, 3, 0.2) ≈ besselj(1, 0.2) / 0.2
         @test Hankel.sphbesselj(1, 3, 0.2) == besselj(2, 0.2) / 0.2
-        @test Hankel.sphbesselj(2, 3, 0.2) == besselj(3, 0.2) / 0.2
+        @test Hankel.sphbesselj(2, 3, 0.2) ≈ besselj(3, 0.2) / 0.2
         @test Hankel.sphbesselj(0, 4, 0.2) ≈ besselj(1.5, 0.2) * √(π / 2 / 0.2^3)
         @test Hankel.sphbesselj(1, 4, 0.2) ≈ besselj(2.5, 0.2) * √(π / 2 / 0.2^3)
         @test Hankel.sphbesselj(2, 4, 0.2) ≈ besselj(3.5, 0.2) * √(π / 2 / 0.2^3)
